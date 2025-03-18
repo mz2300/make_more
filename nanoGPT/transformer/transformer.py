@@ -1,7 +1,6 @@
 import torch
 import torch.nn as nn
 from torch.nn import functional as F
-torch.manual_seed(1337)
 
 class Head(nn.Module):
     def __init__(self, config):

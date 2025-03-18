@@ -13,10 +13,10 @@ class ModelConfig:
 
 config_args = { 
     'vocab_size': None,
-    'n_blocks' : 6,
+    'n_blocks' : 4,
     'block_size': 128,
     'n_heads': 8,
-    'n_embd': 256,
+    'n_embd': 192,
     'dropout': 0.2
 }
 
