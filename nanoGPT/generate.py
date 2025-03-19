@@ -14,8 +14,8 @@ def main():
 
 
     # model and vocab files
-    model_path = f'models/{args.file_name}_model.pth'
-    vocab_file_path = f'vocabs/{args.file_name}_vocab.json'
+    model_path = f'models/{args.file_name}_tpe_model.pth'
+    vocab_file_path = f'vocabs/{args.file_name}_tpe_vocab.json'
 
 
     # load vocab
@@ -49,7 +49,7 @@ def main():
             if i < len(vocab_base):
                 new_ids.append(i)
             else:
-                merg_pair = merges[i]
+                merg_pair = merges[str(i)]
                 unmerged_ids = unmerge(merg_pair)
                 new_ids.extend(unmerged_ids)
         return new_ids
@@ -60,3 +60,30 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+
+
+### Example of output:
+
+# And I do bid against him.
+
+# BISHOP OF MORK:
+# That Marshal, that may name
+# To exchange me from the world; out thou a
+# private of that God's name, be cave; therefore, my Pompey.
+
+# TYRREL:
+# O, sir, I am a little of France of England.
+
+# HENRY BOLINGBROKE:
+# Here be Montague is a journeyed of spirit,
+# And I ne'er fortune to fear.
+
+# EXETER:
+# Unless your worship forth your youth,
+# Six here from the which should nove in spoil
+# Deserved glory: have thou swere up for yourselves, gives
+# Assay that is light on the whole golden his eyes?
+# And that there is cut of Gloucester,
+# Should seem the murder kingdom enmity. The duke
+# Who see the pale-d
